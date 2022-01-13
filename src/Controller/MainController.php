@@ -6,12 +6,13 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
-
 class MainController extends AbstractController
 {
 
     /**
-     * @Route("/", name="main_home")
+     * @Route("/",
+     *     host="{subdomain}.devformatic.fr",
+     *     defaults={"subdomain"="bucketlist", name="main_home")
      */
     public function home()
     {
