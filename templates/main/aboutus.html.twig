@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+	<h1>About us</h1>
+
+	<div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, facilis eius. Eos sint natus commodi quas omnis nobis, ex tempore quisquam similique, animi neque quidem!</div>
+
+	{% for member in members %}
+
+
+		<ul>
+			<li>Prénom :
+				{% if member.firstname == "Fabien" %}❤︎
+				{% endif %}
+				{{ member.firstname }}</li>
+			<li>Nom :{{ member.lastname }}</li>
+			<li>Date de naissance :
+				{{ member.dateOfBirth|date('d-m-Y') }}</li>
+			<li>Techno :{{ member.creatorOf }}</li>
+			<li>Photo :
+				<br>
+				<img src="{{ member.picture }}" alt="">
+			</li>
+			<li>Description:
+				{{ member.description }}</li>
+		</ul>
+	{% endfor %}
+{% endblock %}
+{% block title %}
+	{{ parent() }}| About us
+{% endblock %}

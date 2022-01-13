@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer une nouvelle chose à faire |
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<div>
+		{{ form_start(wishForm) }}
+		{{ form_widget(wishForm) }}
+
+		<button>Créer !</button>
+		{{ form_end(wishForm) }}
+
+	</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}todo afficher les choses à faire |
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<section>
+		{% for wish in wishs %}
+			<li>
+				<a href="{{ path('wish_details', {'id': wish.id}) }}">{{ wish.title }}
+					-
+					{{ wish.category.name }}
+				</a>
+			</li>
+		{% endfor %}
+	</section>
+
+{% endblock %}

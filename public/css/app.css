@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@1,200&display=swap");
+
+body {
+  font-family: "Crimson Pro", serif;
+  font-style: italic;
+}
+.container {
+  background-color: #bc956b;
+}
+main {
+  background-color: antiquewhite;
+  margin: 0%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #bc956b;
+}
+
+img {
+  max-width: 100%;
+}
+
+body > .container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  margin-left: 10vh;
+  padding-right: 10vh;
+}
+header img {
+  height: 70px;
+}
+
+main {
+  flex: 1;
+  padding-left: 10vh;
+  padding-right: 10vh;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+nav li {
+  margin-right: 1rem;
+}
+
+footer {
+  text-align: center;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+label {
+  display: block;
+}
+
+input,
+textarea {
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  width: 150px;
+  max-width: 50%;
+}
+
+.flash {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+.flash-success {
+  background-color: greenyellow;
+}

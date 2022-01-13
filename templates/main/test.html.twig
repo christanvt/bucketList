@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+
+	<h1>coucou</h1>
+	<div>{{ bucket.title }}</div>
+	<div>{{ autreVar }}</div>
+	<div>
+
+		{# crée une variable !  #}
+		<div>{{ "now"|date('d/m/Y') }}</div>
+
+
+		{# crée une variable !  #}
+		{% set name = "moi" %}
+		<h2>{{ name|length }}</h2>
+
+		{# crée un tableau #}
+		{% set colors = ["orange", "brown", "turquoise", "blue"] %}
+
+		<div>nombre de couleurs :
+			{{colors|length}}</div>
+		<div>{{colors|join(' / ')}}</div>
+
+		{% for color in colors %}
+			{% if loop.last %}
+				<div>dernier passage</div>
+			{% else %}
+				<div>{{ loop.index}}</div>
+			{% endif %}
+			<div style="background-color: {{ color }}">{{ color }}</div>
+
+		{% endfor %}
+
+		{% set book = {
+                title: 'Pipaf',
+                year:2000,
+                author: "John Doe"
+            } %}
+
+		{# un objet #}
+		<h3>{{ book.author }}</h3>
+		<div>
+			{% for key, val in book %}
+				<div>
+					{{ key }}
+					:
+					{{ val}}</div>
+			{% endfor %}
+		</div>
+
+	</div>
+{% endblock %}
+{% block title %}
+	{{ parent() }}| Test
+{% endblock %}
