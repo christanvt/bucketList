@@ -6,13 +6,12 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
+
 class MainController extends AbstractController
 {
 
     /**
-     * @Route("/",
-     *     host="{subdomain}.devformatic.fr",
-     *     defaults={"subdomain"="bucketlist", name="main_home")
+     * @Route("/", name="main_home")
      */
     public function home()
     {
@@ -20,7 +19,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/test/", name="main_test")
+     * @Route("/test", name="main_test")
      */
     public function test()
     {
@@ -35,7 +34,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/Aboutus/", name="main_aboutus")
+     * @Route("/Aboutus", name="main_aboutus")
      */
     public function aboutus()
     {
