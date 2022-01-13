@@ -19,7 +19,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/test", name="main_test")
+     * @Route("/test/", name="main_test")
      */
     public function test()
     {
@@ -34,7 +34,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/Aboutus", name="main_aboutus")
+     * @Route("/Aboutus/", name="main_aboutus")
      */
     public function aboutus()
     {

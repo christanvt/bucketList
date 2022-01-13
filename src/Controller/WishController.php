@@ -13,12 +13,12 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
- * @Route("/wish", name="wish_")
+ * @Route("/wish/", name="wish_")
  */
 class WishController extends AbstractController
 {
     /**
-     * @Route("", name="list")
+     * @Route("/", name="list")
      */
     public function list(WishRepository $wishRepository): Response
     {
@@ -30,7 +30,7 @@ class WishController extends AbstractController
     }
 
     /**
-     *  @Route("/create", name="create")
+     *  @Route("/create/", name="create")
      */
     public function create(
         Request $request,
@@ -60,7 +60,7 @@ class WishController extends AbstractController
     }
 
     /**
-     *  @Route("/details/{id}", name="details")
+     *  @Route("/details/{id}/", name="details")
      */
     public function details(int $id, WishRepository $wishRepository): Response
     {
